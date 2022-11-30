@@ -192,7 +192,7 @@ def export_detected_regions(
     # export regions
     for ind, region in enumerate(regions):
         # get export path
-        file_path = os.path.join(crops_dir, "crop_" + str(ind) + ".png")
+        file_path = os.path.join(crops_dir, str(ind).zfill(5) + ".png")
         # export region
         export_detected_region(image, poly=region, file_path=file_path, rectify=rectify)
         # note exported file path
